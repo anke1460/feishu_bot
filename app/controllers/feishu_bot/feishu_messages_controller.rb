@@ -5,6 +5,8 @@ module FeishuBot
     skip_before_action :verify_authenticity_token
 
     def create
+      return render json: {challenge: params[:challenge]} if params[:challenge]
+
       if params[:event][:type] == 'message'
         user = FeishuUser.find_or_initialize_by(uid: params[:event][:open_id])
         user.save
@@ -22,7 +24,7 @@ module FeishuBot
         message.save
       end
 
-      render json: {challenge: params[:challenge]}
+      render json: {success: true}
     end
   end
 end
