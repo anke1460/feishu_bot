@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  content: MyString
+  clazz: 1
+  feishu_user_id: 1
+  feishu_sender_id: 1
+  uid: MyString
+
+two:
+  content: MyString
+  clazz: 1
+  feishu_user_id: 1
+  feishu_sender_id: 1
+  uid: MyString
