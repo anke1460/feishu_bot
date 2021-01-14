@@ -45,17 +45,6 @@ module FeishuBot
     end
 
     def send_text(open_id, text)
-      res = request.post('https://open.feishu.cn/open-apis/message/v4/send', json: {
-        open_id: open_id,
-        msg_type: 'text',
-        content: {
-          text: text
-        }
-      })
-    end
-
-
-    def send_text(open_id, text)
       send_msg = request.post("https://open.feishu.cn/open-apis/message/v4/send/", :json => { :open_id => open_id, :msg_type => 'text', :content => { :text=> text} })
       send_res = JSON.parse(send_msg.body.readpartial)
     end
