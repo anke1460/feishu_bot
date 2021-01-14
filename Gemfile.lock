@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    feishu_bot (0.1.1)
+    feishu_bot (0.1.2)
       http (>= 4.4.1)
       rails (~> 5.2.3)
 
