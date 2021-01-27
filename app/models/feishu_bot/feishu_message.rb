@@ -4,7 +4,7 @@ module FeishuBot
       'text': 1,
       'image': 2,
       'file': 3,
-      'media' 4
+      'media': 4
     }
   end
 end
