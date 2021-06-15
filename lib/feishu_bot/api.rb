@@ -51,7 +51,7 @@ module FeishuBot
 
     # 使用推荐的消息接口
     def send_message(receive_type, receive_id, msg_type, content)
-      send_msg = request.post("https://open.feishu.cn/open-apis/im/v1/messages", :json => { :receive_id_type => receive_type, :receive_id => receive_id, :msg_type => msg_type, :content => content })
+      send_msg = request.post("https://open.feishu.cn/open-apis/im/v1/messages", :params => { :receive_id_type => receive_type}, :json => { :receive_id => receive_id, :msg_type => msg_type, :content => content })
       send_res = JSON.parse(send_msg.body.readpartial)
     end
 
